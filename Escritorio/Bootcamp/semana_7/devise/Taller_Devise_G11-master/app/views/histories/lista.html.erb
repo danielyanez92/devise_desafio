@@ -1,0 +1,15 @@
+<ul>
+  <% @histories.reverse.each do |history| %>
+  <li>
+    <%= image_tag(history.picture_url, style: "max-width: 100%; border-radius: 10px;") if history.picture? %>
+  </li>
+  <li>
+    <h1><%= history.title %></h1>
+  </li>
+  <li>
+    <p><%= history.content %></p>
+  </li>
+  <br>
+  <% end %>
+
+</ul>
